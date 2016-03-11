@@ -1,0 +1,25 @@
+body {
+  background-image: url('sprites/bak.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.ship {
+  background-image: url('sprites/ship.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: absolute;
+  left: 300px;
+  top: 500px;
+  width: 50px;
+  height: 60px;
+}
+
+.laser {
+  background-image: url('sprites/laser.png');
+  background-repeat: no-repeat;
+  background-size: 30%;
+  position: absolute;
+  width: 25px;
+  height: 30px;
+}
