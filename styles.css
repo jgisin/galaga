@@ -1,7 +1,32 @@
+@font-face {
+font-family: 'Arcade Normal';
+font-style: normal;
+font-weight: normal;
+src: local('Arcade Normal'), url('sprites/ARCADE_N.woff') format('woff');
+}
+
 body {
   background-image: url('sprites/bak.jpg');
   background-repeat: no-repeat;
   background-size: 100%;
+}
+
+.arcade {
+  position: absolute;
+  font-size: 24px;
+  font-family: 'Arcade Normal';
+}
+
+#score {
+  color: white;
+  left: 50px;
+  top: 30px;
+}
+
+#score-label {
+  color: red;
+  left: 50px;
+  top: 0px;
 }
 
 .ship {
@@ -22,4 +47,13 @@ body {
   position: absolute;
   width: 25px;
   height: 30px;
+}
+
+.enemy_1 {
+  background-image: url('sprites/enemy_1.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: absolute;
+  width: 50px;
+  height: 60px;
 }

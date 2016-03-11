@@ -2,6 +2,11 @@ var view = {
 
   init: function(){
     view.eventListeners.keypressListener();
+    view.eventListeners.keyUpListener();
+  },
+
+  updateScore: function(score){
+    $('#score').text(score);
   },
 
   renderShip: function(location){
@@ -22,6 +27,26 @@ var view = {
     $( '[data-id="'+ id +'"]' ).remove();
   },
 
+  deleteEnemy: function(id){
+    $( '[data-enemy="'+ id +'"]' ).remove();
+  },
+
+  createEnemy1: function(id, location){
+    $( 'body' ).append($('<div class="enemy_1" data-enemy="' + id + '"></div>'))
+    $('.enemy_1').last().css('top', location.top + "px").css('left', location.left + "px")
+  },
+
+  animations: {
+    enemy1Animate: function(){
+      var text = $('.enemy_1').css('background-image').split('/')
+      if(text[text.length - 1] === 'enemy_1.png")'){
+        $('.enemy_1').css('background-image', "url('file:///Users/jgisin/Sites/Viking/Galaga/sprites/enemy_1A.png')")
+      }else {
+        $('.enemy_1').css('background-image', "url('file:///Users/jgisin/Sites/Viking/Galaga/sprites/enemy_1.png')")
+      }
+    },
+  },
+
   eventListeners: {
     keypressListener: function(){
       $( document ).keydown(function(e) {
@@ -40,6 +65,21 @@ var view = {
           break;
         }
       })
-    }//end keypressListener
+    },//end keypressListener
+
+    keyUpListener: function(){
+      $( document ).keyup(function(e) {
+        switch(e.which){
+          case 37: // left
+          controller.direction = "";
+          break;
+
+          case 39: // right
+          controller.direction = "";
+          break;
+        }
+      })
+    }//end keyUpListener
+
   }//end eventListeners
 }
