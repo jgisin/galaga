@@ -29,28 +29,55 @@ body {
   top: 0px;
 }
 
+#hiscore {
+  color: white;
+  left: 610px;
+  top: 30px;
+}
+
+#hiscore-label {
+  color: red;
+  left: 580px;
+  top: 0px;
+}
+
+#win {
+  color: white;
+  left: 580px;
+  top: 300px;
+}
+
 .ship {
   background-image: url('sprites/ship.png');
   background-repeat: no-repeat;
   background-size: 100%;
   position: absolute;
   left: 300px;
-  top: 500px;
+  top: 650px;
   width: 50px;
   height: 60px;
 }
 
 .laser {
-  background-image: url('sprites/laser.png');
+  background-image: url('sprites/laser5.png');
   background-repeat: no-repeat;
-  background-size: 30%;
+  background-size: 100%;
   position: absolute;
-  width: 25px;
-  height: 30px;
+  width: 35px;
+  height: 120px;
 }
 
 .enemy_1 {
   background-image: url('sprites/enemy_1.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: absolute;
+  width: 50px;
+  height: 60px;
+}
+
+.enemy_2 {
+  background-image: url('sprites/enemy_2.png');
   background-repeat: no-repeat;
   background-size: 100%;
   position: absolute;
